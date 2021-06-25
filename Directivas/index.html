@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Directivas</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <ul>
+        <!--Directiva v-for -->
+        <!-- <li v-for="item in items">{{item}}</li> -->
+        <!-- <li v-for="(value, key, index) in items">
+          {{value}} {{key}} {{index}}
+        </li> -->
+        <!-- <li v-for="item in items">{{item.name}}</li> -->
+        <li v-for="(value, key, index) in items" :key="index">
+          {{value.name}}
+        </li>
+      </ul>
+    </div>
+    <script src="./vue.js"></script>
+
+    <script>
+      var vm = new Vue({
+        el: "#app",
+        data: {
+          //items: [1, 2, 3, 4, 45, 67, 89],
+          //   items: {
+          //     name: "codi",
+          //     age: 7,
+          //   },
+          items: [{ name: "Hola" }, { name: "Dos" }, { name: "Hola" }],
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <!-- <button v-on:click="eventClick">Click</button> -->
+      <!-- <button @click="eventClick('Hola',$event)">Click</button> -->
+      <!-- <form @submit.prevent="eventClick">
+        <button type="submit">Enviar</button>
+      </form> -->
+      <!-- <button @click.once.self.prevent="eventClick">Enviar</button> -->
+      <!-- <input type="text" @keyup.enter="eventClick"/> -->
+      <div @copy="eventClick">Elit labore commodo minim aliquip. </div>
+    </div>
+    <script src="./vue.js"></script>
+
+    <script>
+      var vm = new Vue({
+        el: "#app",
+        data: {},
+        methods: {
+          // eventClick: function (value, event) {
+          //   if (event) event.preventDefault();
+          //   alert("Clicked " + value);
+          // },
+          eventClick: function () {
+            alert("Sent ");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
